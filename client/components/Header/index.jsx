@@ -17,8 +17,8 @@ class Header extends Component {
       <header className={style.header}>
         <span>联豆平台</span>
         <a href="javascript:void(0);" title="" className={style.back} onClick={this.goBack}></a>
-        <a href="javascript:void(0)" title="刷新" className={style.refresh} onClick={this.refresh}>刷新</a>
-        <Link to="help" className="help"></Link>
+        <a href="javascript:void(0)" title="刷新" className={style.refresh} onClick={this.refresh}></a>
+          <a href="javascript:;" title="帮助" className={style.help}></a>
       </header>
     )
   }

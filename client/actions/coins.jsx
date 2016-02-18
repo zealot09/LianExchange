@@ -30,3 +30,9 @@ export function loadAccount() {
     requestParams: {Includes:['Accounts','Profile','BankCards']}
   }
 }
+
+export function filterAccount() {
+  return {
+    type: ActionTypes.ACCOUNT_FILTER
+  }
+}

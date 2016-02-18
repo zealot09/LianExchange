@@ -12,10 +12,8 @@ class App extends Component {
     const { todos, actions, children } = this.props
     return (
       <div className={style.normal}>
-        <Header addTodo={actions.addTodo} />
         <Link to="buy">图书</Link>
         <a className="fetch-btn">加载</a>
-        {children}
       </div>
     )
   }

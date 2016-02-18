@@ -2,10 +2,10 @@ import React, { Component, PropTypes } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import * as Coins from '../../actions/coins'
-// import * as AccountAction from '../../actions/account'
 import style from './style.css'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
+import OfficialBuy from '../../components/OfficialBuy'
 
 class Buy extends Component {
   render() {
@@ -14,12 +14,16 @@ class Buy extends Component {
     return (
       <div>
         <Header />
+        <section className="content">
 
+        </section>
         <Footer />
       </div>
     )
   }
 }
+
+// <OfficialBuy />
 
 function mapStateToProps(state) {
   return {

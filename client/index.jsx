@@ -9,6 +9,8 @@ import App from './containers/App'
 import Buy from './containers/Buy'
 
 import configure from './store'
+import './public/css/reset.css'
+import './public/css/base.css'
 
 const store = configure()
 const history = createHistory()

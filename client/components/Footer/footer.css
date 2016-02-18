@@ -1,0 +1,88 @@
+.llytabs {
+  width: 100%;
+  position: fixed;
+  height: 44px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  z-index: 9;
+}
+li {
+  height: 46px;
+  line-height: 46px;
+  padding: 4px 0;
+  width: 20%;
+  position: relative;
+  float: left;
+}
+li.selected a {
+  color: #d39756;
+}
+.line {
+  border-right: 1px solid #eee;
+  text-align: center;
+}
+.tabIcon {
+  display: block;
+  height: 20px;
+  width: 30px;
+  margin: 0 auto;
+}
+.tabBuy {
+  background: url(../../public/images/sprite_bg.png) -18px -67px no-repeat;
+  background-size: 250px 250px;
+}
+.tabBuySelected {
+  background: url(../../public/images/sprite_bg.png) 6px -67px no-repeat;
+  background-size: 250px 250px;
+}
+.tabSell {
+  background: url(../../public/images/sprite_bg.png) -18px -46px no-repeat;
+  background-size: 250px 250px;
+}
+.tabSellSelected {
+  background: url(../../public/images/sprite_bg.png) 6px -46px no-repeat;
+  background-size: 250px 250px;
+}
+.tabAccount {
+  background: url(../../public/images/sprite_bg.png) -18px -23px no-repeat;
+  background-size: 250px 250px;
+}
+.tabAccountSelected {
+  background: url(../../public/images/sprite_bg.png) 6px -23px no-repeat;
+  background-size: 250px 250px;
+}
+.tabOrder {
+  background: url(../../public/images/sprite_bg.png) -18px -90px no-repeat;
+  background-size: 250px 250px;
+}
+.tabOrderSelected {
+  background: url(../../public/images/sprite_bg.png) 8px -90px no-repeat;
+  background-size: 250px 250px;
+}
+.tabHandsel {
+  background: url(../../public/images/sprite_bg.png) 4px -114px no-repeat;
+  background-size: 250px 250px;
+}
+.tabHandselSelected {
+  background: url(../../public/images/sprite_bg.png) -22px -114px no-repeat;
+  background-size: 250px 250px;
+}
+.tabLuckymoney {
+  background: url(../../public/images/sprite_bg.png) -17px 3px no-repeat;
+  background-size: 250px 250px;
+}
+.tabLuckymoneySelected {
+  background: url(../../public/images/sprite_bg.png) 6px 2px no-repeat;
+  background-size: 250px 250px;
+}
+a {
+  display: block;
+  text-align: center;
+  line-height: 14px;
+  height: 14px;
+  color: #474747;
+  font-size: 12px;
+  margin-top: 2px;
+}

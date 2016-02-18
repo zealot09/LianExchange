@@ -1,0 +1,36 @@
+.officialBuy {
+  position: relative;
+  border-top: 12px solid #eee;
+}
+.marketTitle {
+  padding: 0 10px;
+  /*color:$font_week_color;*/
+}
+label {
+  /*@include inline-block();*/
+  display: inline-block;
+  width: 37%;
+  padding: 0 10px;
+}
+.officialPrice {
+  padding: 10px 20px;
+  line-height: 40px;
+}
+.officialPrice span {
+  font-size: $super_font_size;
+  color: $font_color;
+  padding-right: 15px;
+}
+.btnOfficialBuy {
+  /*@include size(120px, 40px);*/
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background-color: $main_color;
+  text-align: center;
+  float: right;
+  font-size: $btn_font_size;
+  /*@include border-radius(1px);*/
+  border-radius: 1px;
+}
