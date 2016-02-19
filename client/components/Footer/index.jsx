@@ -3,6 +3,12 @@ import React, { PropTypes, Component } from 'react'
 import style from './footer.css'
 
 class Header extends Component {
+  goBuy() {
+    this.props.history.push({
+      pathname: 'buy'
+    })
+  }
+
   render() {
     var tabBuyClass = [style.tabIcon, style.tabBuySelected, style.selected].join(' ')
     var tabSellClass = [style.tabIcon, style.tabSell].join(' ')
@@ -13,7 +19,7 @@ class Header extends Component {
     return (
         <ul className={style.llytabs}>
           <li className={style.selected}>
-            <div className={style.line }>
+            <div className={style.line } onClick={this.goBuy.bind(this)}>
               <div className={tabBuyClass}></div>
               <a href="javascript:void(0)">买联豆</a>
            </div>

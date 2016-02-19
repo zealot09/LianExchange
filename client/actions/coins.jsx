@@ -1,6 +1,8 @@
 import ActionTypes from '../constants/ActionTypes'
 import {requestBase, baseAPI} from '../app/configs'
 
+import { createAction } from 'redux-actions'
+
 export function loadCoins() {
   return {
     types: [
@@ -36,3 +38,6 @@ export function filterAccount() {
     type: ActionTypes.ACCOUNT_FILTER
   }
 }
+
+export const showLoading = createAction('show loading')
+export const hideLoading = createAction('hide loading')

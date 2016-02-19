@@ -22,10 +22,21 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-      </Route>
-      <Route path="/buy" component={Buy}>
+        <Route path="buy" component={Buy} />
       </Route>
     </Router>
   </Provider>,
   document.getElementById('root')
 )
+
+// ReactDOM.render(
+//   <div className="loading-container">
+//     <div className="mask loading-mask">
+//       <span className="loading">加载中...</span>
+//     </div>
+//     <div className="mask loading-mask">
+//       <span className="loading">加载中...</span>
+//     </div>
+//   </div>,
+//   document.getElementById('loading-container')
+// )

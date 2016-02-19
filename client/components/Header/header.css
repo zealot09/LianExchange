@@ -1,19 +1,21 @@
+@value base: "../../public/css/var.css";
+@value lineColor,mainColor, headerFontColor, headerBg from base;
+
 .header {
     position: fixed;
     top: 0;
     line-height: 44px;
     height: 44px;
-    /*border-bottom: 1px solid #a0aab4;*/
     width: 100%;
     text-align: center;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
     font-size: 18px;
-    /*color: $header_font_color;*/
+    color: headerFontColor;
     z-index: 9;
-    background-color: $header_bg;
-    border-bottom: 1px solid #eeeeee;
+    background-color: headerBg;
+    border-bottom: 1px solid lineColor;
   }
 
 .header a{

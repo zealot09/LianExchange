@@ -1,4 +1,7 @@
-section {
+:global(.content) {
   vertical-align: middle;
     padding: 44px 0;
+}
+:global(.hide) {
+  display: none;
 }

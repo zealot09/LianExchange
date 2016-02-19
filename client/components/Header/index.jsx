@@ -13,6 +13,7 @@ class Header extends Component {
   }
 
   render() {
+    
     return (
       <header className={style.header}>
         <span>联豆平台</span>

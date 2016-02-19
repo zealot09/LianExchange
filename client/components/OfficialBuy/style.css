@@ -1,13 +1,37 @@
+@value base: "../../public/css/var.css";
+@value lineColor,mainColor, headerFontColor, headerBg, fontWeekColor, btnFontSize from base;
+
 .officialBuy {
   position: relative;
   border-top: 12px solid #eee;
+  background: white;
 }
 .marketTitle {
   padding: 0 10px;
-  /*color:$font_week_color;*/
+  color:fontWeekColor;
+}
+.h2Title {
+  height: 1px;
+  margin: 25px 15px 20px;
+  background-color: #eee;
+  position: relative;
+}
+.h2Title span {
+  font-size: 18px;
+    color: #d39756;
+    background-color: #fff;
+    width: 120px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    margin-left: -60px;
+    font-weight: bold;
 }
 label {
-  /*@include inline-block();*/
   display: inline-block;
   width: 37%;
   padding: 0 10px;
@@ -22,15 +46,13 @@ label {
   padding-right: 15px;
 }
 .btnOfficialBuy {
-  /*@include size(120px, 40px);*/
   width: 120px;
   height: 40px;
   line-height: 40px;
   color: #fff;
-  background-color: $main_color;
+  background-color: mainColor;
   text-align: center;
   float: right;
-  font-size: $btn_font_size;
-  /*@include border-radius(1px);*/
+  font-size: btnFontSize;
   border-radius: 1px;
 }
