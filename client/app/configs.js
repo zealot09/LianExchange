@@ -12,6 +12,6 @@ export const baseAPI = {
 
 export const requestBase = {
   // lianCoinUrl: 'http://172.16.0.84:8079/api/'
-  // lianCoinUrl: 'http://mobile.liandou.ailianlian.com/html/Hybrid/'
-  lianCoinUrl:  'http://10.211.55.3:9118/api/'
+  lianCoinUrl: 'http://mobile.liandou.ailianlian.com/api/'
+  // lianCoinUrl:  'http://10.211.55.3:9118/api/'
 }

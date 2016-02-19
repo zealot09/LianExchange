@@ -5,3 +5,46 @@
 :global(.hide) {
   display: none;
 }
+
+:global(.mask) {
+    background-color: rgba(16, 16, 16, 0.9);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+:global(.mask.loading-mask){
+    background-color: transparent;
+    z-index: 10500;
+}
+
+:global(.loading) {
+      width: 100px;
+      height: 35px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -50px auto auto -50px;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: #ffffff;
+      padding-top: 65px;
+      text-align: center;
+      font-size: 13px;
+      line-height: 20px;
+}
+
+:global(.loading:before) {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 80px;
+    background: url(../images/loading.GIF) center no-repeat;
+    -webkit-background-size: 20px 20px;
+    background-size: 20px 20px;
+}

@@ -1,6 +1,7 @@
 import superagent from 'superagent'
 import querystring from 'querystring'
 import util from '../utils/util'
+import * as Actions from '../actions/coins'
 
 import {requestBase, baseAPI} from '../app/configs'
 
@@ -17,11 +18,18 @@ export default function apiMiddleware({getState}) {
       const state = getState()
       let params = {...action.requestParams}
       let requestSettings = {...action.requestSettings}
-      //fetching...
+
       next({
-        type: PENDING,
-        params
+        type: 'show loading'
       })
+      // if(!state.handleLoading.isLoading) {
+      //   next(Actions.showLoading)
+      // }
+      //fetching...
+      // next({
+      //   type: PENDING,
+      //   params
+      // })
 
       const requestMethod = requestSettings.method.toUpperCase()
       var { url } = requestSettings
@@ -39,6 +47,11 @@ export default function apiMiddleware({getState}) {
                   params
                 })
               } else {
+                console.log({
+                  type: FULFILLED,
+                  params,
+                  data: res.body.data
+                })
                 next({
                   type: FULFILLED,
                   params,
@@ -58,6 +71,11 @@ export default function apiMiddleware({getState}) {
                   params
                 })
               } else {
+                console.log({
+                  type: FULFILLED,
+                  params,
+                  data: res.body.data
+                })
                 next({
                   type: FULFILLED,
                   params,

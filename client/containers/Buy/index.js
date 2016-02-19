@@ -11,7 +11,7 @@ class Buy extends Component {
     return (
       <div>
         <section className="content">
-          <OfficialBuy />
+          <OfficialBuy {...this.props}/>
         </section>
       </div>
     )
@@ -22,7 +22,7 @@ class Buy extends Component {
 
 function mapStateToProps(state) {
   return {
-    storage: state.coins
+    storage: state
   }
 }
 

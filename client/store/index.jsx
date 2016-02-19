@@ -10,7 +10,7 @@ export default function configure(initialState) {
 
   var middlewares = [apiMiddleware, bridgeMiddleware]
   const finalCreateStore = compose(
-    applyMiddleware(...middlewares)
+    applyMiddleware(apiMiddleware)
     // applyMiddleware(middlewares)
   )(create)
 

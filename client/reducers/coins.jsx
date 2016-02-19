@@ -15,7 +15,6 @@ export default function coins(state = initState, action) {
       }
     }
     case ActionTypes.COINS_LOAD_SUCCESS: {
-      console.log(action)
       return {
         ...state,
         coins: action.data.items,

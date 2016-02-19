@@ -16,9 +16,9 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.(png|jpg)$/,
+        test: /\.(png|jpg|gif|GIF)$/,
         loader: 'url-loader?limit=25000'
-      },{
+      }, {
         test: /\.html$/,
         loader: 'file?name=[name].[ext]'
       },

@@ -4,15 +4,18 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-// import MainSection from '../../components/MainSection'
-import * as TodoActions from '../../actions/todos'
+import Mask from '../../components/Mask'
+
+import * as Coins from '../../actions/coins'
 import style from './style.css'
 
 class App extends Component {
   render() {
     const { todos, actions, children } = this.props
+
     return (
       <div>
+        <Mask {...this.props.loading}/>
         <Header />
         {this.props.children}
         <Footer {...this.props}/>
@@ -21,17 +24,16 @@ class App extends Component {
   }
 }
 
-// <MainSection todos={todos} actions={actions} />
-
 function mapStateToProps(state) {
   return {
-    todos: state.todos
+    storage: state.coins,
+    loading: state.handleLoading
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(TodoActions, dispatch)
+    actions: bindActionCreators(Coins, dispatch)
   }
 }
 
