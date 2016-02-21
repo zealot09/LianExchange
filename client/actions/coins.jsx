@@ -39,16 +39,9 @@ export function filterAccount() {
   }
 }
 
-export function showLoading() {
-  return {
-    type: 'show loading'
-  }
-}
-export function hideLoading() {
-  return {
-    type: 'hide loading'
-  }
-}
-
-// export const showLoading = createAction('show loading')
-// export const hideLoading = createAction('hide loading')
+export const showLoading = createAction('show loading')
+export const hideLoading = createAction('hide loading')
+export const showAlert = createAction('show alert')
+export const hideAlert = createAction('hide alert')
+export const showConfirm = createAction('show confirm')
+export const hideConfirm = createAction('hide confirm')

@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
+import Modal from 'react-modal'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Header from '../../components/Header'
@@ -9,16 +10,40 @@ import Mask from '../../components/Mask'
 import * as Coins from '../../actions/coins'
 import style from './style.css'
 
+//custom alert dialog style
+const customStyle = {
+  content : {
+   top : '50%',
+   left : '50%',
+   right : 'auto',
+   bottom : 'auto',
+   marginRight : '-50%',
+   transform : 'translate(-50%, -50%)'
+ }
+}
+
 class App extends Component {
+  closeAlert() {
+    console.log('close alert')
+  }
+  openAlert() {
+    console.log('open alert')
+  }
   render() {
     const { todos, actions, children } = this.props
-
     return (
       <div>
         <Mask {...this.props.loading}/>
         <Header />
         {this.props.children}
         <Footer {...this.props}/>
+          <Modal isOpen={this.props.loading.alert.isShowAlert}
+                 onRequestClose={this.closeAlert}
+                 style={customStyle}>
+            <h2>好像已经断网了</h2>
+            <p>{this.props.loading.alert.message}</p>
+            <a href="javascript:;" onClick={actions.hideAlert}>好的</a>
+          </Modal>
       </div>
     )
   }

@@ -1,7 +1,6 @@
 import superagent from 'superagent'
 import querystring from 'querystring'
 import util from '../utils/util'
-import * as Actions from '../actions/coins'
 
 import {requestBase, baseAPI} from '../app/configs'
 
@@ -19,17 +18,16 @@ export default function apiMiddleware({getState}) {
       let params = {...action.requestParams}
       let requestSettings = {...action.requestSettings}
 
-      next({
-        type: 'show loading'
-      })
-      // if(!state.handleLoading.isLoading) {
-      //   next(Actions.showLoading)
-      // }
+      if(!state.handleLoading.isLoading) {
+        next({
+          type: 'show loading'
+        })
+      }
       //fetching...
-      // next({
-      //   type: PENDING,
-      //   params
-      // })
+      next({
+        type: PENDING,
+        params
+      })
 
       const requestMethod = requestSettings.method.toUpperCase()
       var { url } = requestSettings
@@ -41,17 +39,17 @@ export default function apiMiddleware({getState}) {
         case 'GET': {
           return superagent.get(url + '&' + querystring.stringify(params))
             .end((err, res) => {
+              //hide the loading mask
+              next({
+                type: 'hide loading'
+              })
+
               if(err || !res.body) {
                 next({
                   type: REJECTED,
                   params
                 })
               } else {
-                console.log({
-                  type: FULFILLED,
-                  params,
-                  data: res.body.data
-                })
                 next({
                   type: FULFILLED,
                   params,
@@ -65,17 +63,16 @@ export default function apiMiddleware({getState}) {
             .set('Content-Type', 'application/json')
             .send(params)
             .end((err, res) => {
+              next({
+                type: 'hide loading'
+              })
+
               if(err || !res.body) {
                 next({
                   type: REJECTED,
                   params
                 })
               } else {
-                console.log({
-                  type: FULFILLED,
-                  params,
-                  data: res.body.data
-                })
                 next({
                   type: FULFILLED,
                   params,
@@ -89,6 +86,10 @@ export default function apiMiddleware({getState}) {
           .set('Content-Type', 'application/json')
           .send(params)
           .end((err, res) => {
+            next({
+              type: 'hide loading'
+            })
+
             if(err || !res.body) {
               next({
                 type: REJECTED,
@@ -108,6 +109,10 @@ export default function apiMiddleware({getState}) {
           .set('Content-Type', 'application/json')
           .send(params)
           .end((err, res) => {
+            next({
+              type: 'hide loading'
+            })
+
             if(err || !res.body) {
               next({
                 type: REJECTED,
