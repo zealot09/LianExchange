@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react'
 
-import style from './footer.css'
+import style from './footer.local.css'
 
 class Header extends Component {
   goBuy() {

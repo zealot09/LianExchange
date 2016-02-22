@@ -1,50 +1,74 @@
-:global(.content) {
+.content {
   vertical-align: middle;
-    padding: 44px 0;
+  padding: 44px 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
-:global(.hide) {
+.hide {
   display: none;
 }
-
-:global(.mask) {
-    background-color: rgba(16, 16, 16, 0.9);
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
+.clear {
+  clear: both;
 }
-
-:global(.mask.loading-mask){
-    background-color: transparent;
-    z-index: 10500;
+.mask {
+  background-color: rgba(16, 16, 16, 0.9);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
 }
-
-:global(.loading) {
-      width: 100px;
-      height: 35px;
-      -webkit-border-radius: 10px;
-      border-radius: 10px;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      margin: -50px auto auto -50px;
-      background-color: rgba(0, 0, 0, 0.9);
-      color: #ffffff;
-      padding-top: 65px;
-      text-align: center;
-      font-size: 13px;
-      line-height: 20px;
+.mask.loading-mask {
+  background-color: transparent;
+  z-index: 10500;
 }
-
-:global(.loading:before) {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100px;
-    height: 80px;
-    background: url(../images/loading.GIF) center no-repeat;
-    -webkit-background-size: 20px 20px;
-    background-size: 20px 20px;
+.loading {
+  width: 100px;
+  height: 35px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -50px auto auto -50px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+  padding-top: 65px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 20px;
+}
+.loading:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 80px;
+  background: url(../images/loading.GIF) center no-repeat;
+  -webkit-background-size: 20px 20px;
+  background-size: 20px 20px;
+}
+.dialog-box {
+  min-height: 100px;
+  background-color: #ffffff;
+  width: 254px;
+  padding: 20px 18px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 3px;
+  font-size: 15px;
+}
+.dialog-box:before {
+  content: "";
+  position: absolute;
+  background: url(../images/dialog_xiaolian.png) no-repeat;
+  background-size: auto 67px;
+  width: 68px;
+  height: 68px;
+  top: -62px;
+  right: 10px;
+  z-index: 100;
 }

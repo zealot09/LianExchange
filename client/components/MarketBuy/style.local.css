@@ -1,0 +1,89 @@
+@value base: "../../public/css/var.css";
+@value lineColor, superFontSize, mainFontColor, fontWeekColor, commonFontSize, mainFontSize from base;
+.marketBuy {
+  position: relative;
+  border-top: 12px solid lineColor;
+  background: white;
+}
+.marketBuy .marketTitle {
+  color: fontWeekColor;
+}
+.marketTitle label {
+  display: inline-block;
+  width: 32%;
+  padding: 0 10px;
+}
+.sellExplain {
+  /*margin:5px 10px 10px 10px;*/
+  font-size: commonFontSize;
+  line-height: 18px;
+  color: fontWeekColor;
+  margin: 10px 10px 22px 10px;
+  padding: 8px 8px 4px;
+  border: 1px dashed #c1c1c1;
+  border-radius: 3px;
+  text-align: justify;
+}
+.h2Title {
+  height: 1px;
+  margin: 25px 15px 20px;
+  background-color: lineColor;
+  position: relative;
+}
+.h2Title span {
+  font-size: superFontSize;
+  color: mainFontColor;
+  background-color: #fff;
+  width: 120px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  margin-left: -60px;
+  font-weight: bold;
+}
+.itemList li {
+  overflow: hidden;
+  padding: 7px 20px;
+  height: 40px;
+  font-size: mainFontSize;
+  position: relative;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.price {
+  width: 35%;
+  display: inline-block;
+  color: #757575;
+  margin: 6px 0;
+  border-right: 1px solid #eee;
+}
+.amount {
+  width: 35%;
+  display: inline-block;
+  color: #757575;
+  margin: 6px 0;
+  padding-left: 5%;
+}
+.operate {
+  box-sizing: border-box;
+  position: absolute;
+  right: 20px;
+  display: inline-block;
+}
+.btnBuy {
+  width: 65px;
+  height: 40px;
+  display: block;
+  background-color: #e4b583;
+  border: 1px solid #e4b583;
+  color: #ffffff;
+  font-size: 15px;
+  text-align: center;
+  line-height: 40px;
+  float: right;
+  border-radius: 1px;
+  background-clip: padding-box;
+}

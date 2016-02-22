@@ -23,14 +23,21 @@ module.exports = {
         loader: 'file?name=[name].[ext]'
       },
       {
-        test: /\.css$/,
+        test: /\.local.css$/,
+        // exclude: [/css/]
         loaders: [
           'style-loader',
           'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
           'postcss-loader'
         ]
-      },
-      {
+      }, {
+        test: /^((?!\.local).)*\.css$/,
+        loaders: [
+          'style-loader',
+          'css-loader?sourceMap&minimize&importLoaders=1',
+          'postcss-loader'
+        ]
+      }, {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loaders: [

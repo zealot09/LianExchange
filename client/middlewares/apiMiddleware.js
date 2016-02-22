@@ -18,7 +18,7 @@ export default function apiMiddleware({getState}) {
       let params = {...action.requestParams}
       let requestSettings = {...action.requestSettings}
 
-      if(!state.handleLoading.isLoading) {
+      if(!state.loadingStore.isLoading) {
         next({
           type: 'show loading'
         })

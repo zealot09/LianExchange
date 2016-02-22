@@ -8,7 +8,7 @@ import Footer from '../../components/Footer'
 import Mask from '../../components/Mask'
 
 import * as Coins from '../../actions/coins'
-import style from './style.css'
+import style from './style.local.css'
 
 //custom alert dialog style
 const customStyle = {
@@ -33,15 +33,15 @@ class App extends Component {
     const { todos, actions, children } = this.props
     return (
       <div>
-        <Mask {...this.props.loading}/>
+        <Mask {...this.props.state.loadingStore}/>
         <Header />
         {this.props.children}
         <Footer {...this.props}/>
-          <Modal isOpen={this.props.loading.alert.isShowAlert}
+          <Modal isOpen={this.props.state.loadingStore.alert.isShowAlert}
                  onRequestClose={this.closeAlert}
                  style={customStyle}>
             <h2>好像已经断网了</h2>
-            <p>{this.props.loading.alert.message}</p>
+            <p>{this.props.state.loadingStore.alert.message}</p>
             <a href="javascript:;" onClick={actions.hideAlert}>好的</a>
           </Modal>
       </div>
@@ -51,8 +51,7 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    storage: state.coins,
-    loading: state.handleLoading
+    state: state
   }
 }
 

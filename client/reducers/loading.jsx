@@ -7,7 +7,10 @@ const initialState = {
     isShowAlert: false,
     message: '弹出对话框'
   },
-  isShowConfirm: false
+  isShowConfirm: false,
+  buyOfficial: {
+    isShow: false
+  }
 }
 
 export default handleActions({
@@ -38,6 +41,18 @@ export default handleActions({
 
   'hide confirm' (state, action) {
     return {...state, isShowConfirm: false}
+  },
+
+  'show official buy dialog' (state, action) {
+    return {...state, buyOfficial: {
+      isShow: true
+    }}
+  },
+
+  'hide official buy dialog' (state, action) {
+    return {...state, buyOfficial: {
+      isShow: false
+    }}
   }
 
 }, initialState)

@@ -9,38 +9,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="mobile-web-app-capable" content="yes"/>
     <meta name="apple-touch-fullscreen" content="yes"/>
-    <!-- <link rel="stylesheet" href="css/gold.css"/> -->
 </head>
 <body class="ui-mobile-viewport">
 
 <div id="root">
-  <!--加载中遮罩 start-->
-  <div class="mask loading-mask" data-usage="loading">
-      <span class="loading">加载中...</span>
-  </div>
-  <!--加载中遮罩 end-->
 
-  <!--加载中遮罩 start-->
-  <div class="mask loading-mask" data-usage="firstLoading">
-      <span class="loading">加载中...</span>
-  </div>
-  <!--加载中遮罩 end-->
-
-  <!--tap遮罩 start-->
-  <div class="mask transparent hide" data-usage="tapMask">
-  </div>
-
-  <div class="debug-wrap hide">
-          <textarea id="debug"></textarea>
-          <div class="controller"></div>
-          <div class="clean"></div>
-      </div>
 </div>
-<!--tap遮罩 end-->
-
-<!-- <script src="console-log-viewer.js"></script> -->
-<!-- <script src="console.js"></script> -->
-
+<div id="loading-container">
+  
+</div>
 <script src="./vendor.bundle.js"></script>
 <script src="./bundle.js"></script>
 </body>

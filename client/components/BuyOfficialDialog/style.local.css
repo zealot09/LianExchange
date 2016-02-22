@@ -1,0 +1,11 @@
+.buyOfficialDialog {
+  min-height: 100px;
+  background-color: #ffffff;
+  width: 254px;
+  padding: 20px 18px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 3px;
+  font-size: 15px;
+}

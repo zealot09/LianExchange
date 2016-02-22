@@ -45,3 +45,6 @@ export const showAlert = createAction('show alert')
 export const hideAlert = createAction('hide alert')
 export const showConfirm = createAction('show confirm')
 export const hideConfirm = createAction('hide confirm')
+
+export const showOfficialBuyDialog = createAction('show official buy dialog')
+export const hideOfficialBuyDialog = createAction('hide official buy dialog')

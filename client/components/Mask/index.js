@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react'
-import style from './style.css'
+import style from './style.local.css'
 
 class Mask extends Component {
 

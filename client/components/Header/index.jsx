@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react'
 import { Link } from 'react-router'
 import base from '../../public/css/base.css'
-import style from './header.css'
+import style from './header.local.css'
 
 class Header extends Component {
   goBack() {
@@ -13,7 +13,7 @@ class Header extends Component {
   }
 
   render() {
-    
+
     return (
       <header className={style.header}>
         <span>联豆平台</span>

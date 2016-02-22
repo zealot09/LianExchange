@@ -28,15 +28,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 )
-
-// ReactDOM.render(
-//   <div className="loading-container">
-//     <div className="mask loading-mask">
-//       <span className="loading">加载中...</span>
-//     </div>
-//     <div className="mask loading-mask">
-//       <span className="loading">加载中...</span>
-//     </div>
-//   </div>,
-//   document.getElementById('loading-container')
-// )
