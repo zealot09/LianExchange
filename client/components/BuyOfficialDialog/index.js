@@ -20,8 +20,13 @@ const customStyle = {
 }
 
 class BuyOfficialDialog extends Component {
-  closeBuyOfficial() {
 
+  closeBuyOfficial() {
+    this.props.actions.hideOfficialBuyDialog()
+  }
+
+  changeAgreementRules(event) {
+    console.log(event)
   }
 
   render() {
@@ -40,12 +45,15 @@ class BuyOfficialDialog extends Component {
             <p className={style.buyFormQuantity}>数量：
               <input type="tel" className={qtyClassName} min="1" max="120000"/>
             </p>
-            <p>同意</p><a href="#articles/TermsAndConditions" className={style.sellRules}>《联豆管理办法》</a>
+            <p>
+              <input type="checkbox" name="sellRules" onChange={this.changeAgreementRules.bind(this)}/>
+              同意<a href="#articles/TermsAndConditions" className={style.sellRules}>《联豆管理办法》</a>
+            </p>
             <div className="buy-form-payment-method">
 
             </div>
-            <a className="btn-submit btn-buy-submit">抢购</a>
-            <a href="javascript:void(0);" className="dialog-btn-close"></a>
+            <a className={style.btnBuySubmit}>抢购</a>
+            <a href="javascript:void(0);" className="dialog-btn-close" onClick={this.closeBuyOfficial.bind(this)}></a>
         </Modal>
       </div>
     )

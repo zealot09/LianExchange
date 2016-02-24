@@ -24,7 +24,6 @@ module.exports = {
       },
       {
         test: /\.local.css$/,
-        // exclude: [/css/]
         loaders: [
           'style-loader',
           'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',

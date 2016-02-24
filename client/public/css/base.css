@@ -61,6 +61,21 @@
   border-radius: 3px;
   font-size: 15px;
 }
+
+.dialog-box p {
+  line-height: 50px;
+  font-size: 15px;
+}
+
+.dialog-box .dialog-btn-close {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  top: 10px;
+  background: url(../images/dialog_close.png) center no-repeat;
+  background-size: 14px auto;
+}
 .dialog-box:before {
   content: "";
   position: absolute;

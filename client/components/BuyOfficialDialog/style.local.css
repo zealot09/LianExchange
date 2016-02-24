@@ -1,3 +1,6 @@
+@value base: "../../public/css/var.css";
+@value mainColor from base;
+
 .buyOfficialDialog {
   min-height: 100px;
   background-color: #ffffff;
@@ -8,4 +11,35 @@
   top: 50%;
   border-radius: 3px;
   font-size: 15px;
+}
+
+.buyDialogAmountInput {
+  width: 90px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid mainColor;
+    padding: 0 5px;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+}
+
+.sellRules {
+  color: green;
+  display: inline-block;
+}
+
+.btnBuySubmit {
+  display: block;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  background-color: #e4b583;
+  border: 1px solid #e4b583;
+  border-radius: 1px;
+  color: #ffffff;
+  font-size: 15px;
+  margin-top: 5px;
 }
