@@ -9,6 +9,7 @@ import App from './containers/App'
 import Buy from './containers/Buy'
 
 import configure from './store'
+import 'icheck/skins/all.css'
 import './public/css/reset.css'
 import './public/css/base.css'
 

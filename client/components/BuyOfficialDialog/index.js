@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react'
 import Modal from 'react-modal'
+import { Checkbox } from '../Checkbox'
 import style from './style.local.css'
 
 const customStyle = {
@@ -45,10 +46,12 @@ class BuyOfficialDialog extends Component {
             <p className={style.buyFormQuantity}>数量：
               <input type="tel" className={qtyClassName} min="1" max="120000"/>
             </p>
-            <p>
-              <input type="checkbox" name="sellRules" onChange={this.changeAgreementRules.bind(this)}/>
+            <div>
+              <Checkbox
+                checkboxClass="icheckbox_square-blue"
+                increaseArea="20%"/>
               同意<a href="#articles/TermsAndConditions" className={style.sellRules}>《联豆管理办法》</a>
-            </p>
+          </div>
             <div className="buy-form-payment-method">
 
             </div>
@@ -62,5 +65,6 @@ class BuyOfficialDialog extends Component {
 
 // <Modal isOpen="">
 // </Modal>
+// <input type="checkbox" name="sellRules" onChange={this.changeAgreementRules.bind(this)}/>
 
 export default BuyOfficialDialog
