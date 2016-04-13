@@ -30,6 +30,10 @@ class BuyOfficialDialog extends Component {
     console.log(event)
   }
 
+  submitOrder() {
+    var { agreement } = this.refs
+  }
+
   render() {
     var state = this.props.state;
 
@@ -48,6 +52,7 @@ class BuyOfficialDialog extends Component {
             </p>
             <div>
               <Checkbox
+                ref="agreement"
                 checkboxClass="icheckbox_square-blue"
                 increaseArea="20%"/>
               同意<a href="#articles/TermsAndConditions" className={style.sellRules}>《联豆管理办法》</a>
@@ -55,7 +60,7 @@ class BuyOfficialDialog extends Component {
             <div className="buy-form-payment-method">
 
             </div>
-            <a className={style.btnBuySubmit}>抢购</a>
+            <a className={style.btnBuySubmit} onClick={this.submitOrder.bind(this)}>抢购</a>
             <a href="javascript:void(0);" className="dialog-btn-close" onClick={this.closeBuyOfficial.bind(this)}></a>
         </Modal>
       </div>

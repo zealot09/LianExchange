@@ -1,9 +1,9 @@
-import React from 'react'
-import classnames from 'classnames'
+import React from 'react';
+import classnames from 'classnames';
 
-const _iCheck = 'iCheck'
-const _iCheckHelper = _iCheck + '-helper'
-const _mobile = /ipad|iphone|ipod|android|blackberry|windows phone|opera mini|silk/i.test(navigator.userAgent)
+const _iCheck = 'iCheck';
+const _iCheckHelper = _iCheck + '-helper';
+const _mobile = /ipad|iphone|ipod|android|blackberry|windows phone|opera mini|silk/i.test(navigator.userAgent);
 
 class EnhancedSwitch extends React.Component {
 
