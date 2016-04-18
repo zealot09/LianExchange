@@ -8,22 +8,21 @@ import React from 'react';
 import App from './containers/App';
 import Buy from './containers/Buy';
 
-import configure from './store'
-import 'icheck/skins/all.css'
-import './public/css/reset.css'
-import './public/css/base.css'
+import configure from './store';
+import 'icheck/skins/all.css';
+import './public/css/reset.css';
+import './public/css/base.css';
 
-const store = configure()
-const history = createHistory()
+const store = configure();
+const history = createHistory();
 // history={history}
 // location="hash"
-syncReduxAndRouter(history, store)
+syncReduxAndRouter(history, store);
 
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-        <Route path="buy" component={Buy} />
         <Route path="buy" component={Buy} />
       </Route>
     </Router>
