@@ -87,3 +87,27 @@
   right: 10px;
   z-index: 100;
 }
+
+.page-enter {
+    transition-duration: .3s;
+    transition-property: transform, opacity;
+    transition-timing-function: ease-out;
+    transform: translate3d(0,100%,0);
+}
+
+.page-enter.page-enter-active {
+    transform: translate3d(0,0,0);
+}
+
+.page-leave {
+    transition-duration: .3s;
+    transition-property: transform, opacity;
+    transition-timing-function: ease-out;
+    transform: translate3d(0,0,0);
+    opacity: 1;
+}
+
+.page-leave.page-leave-active {
+  transform: translate3d(0,-15%,0);
+   opacity: 0.3;
+}

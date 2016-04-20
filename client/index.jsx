@@ -2,6 +2,7 @@ import { Provider } from 'react-redux';
 import { Router, Route } from 'react-router';
 import { createHistory } from 'history';
 import { syncReduxAndRouter} from 'redux-simple-router';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
 import ReactDOM from 'react-dom';
 import React from 'react';
 
@@ -15,17 +16,25 @@ import './public/css/base.css';
 
 const store = configure();
 const history = createHistory();
+history.listen(() => {
+  console.log('------')
+})
 // history={history}
 // location="hash"
 syncReduxAndRouter(history, store);
 
-ReactDOM.render(
+var routers = (
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
         <Route path="buy" component={Buy} />
       </Route>
+      <Route path="/sell" component={Buy}>
+      </Route>
     </Router>
-  </Provider>,
+  </Provider>
+)
+
+ReactDOM.render(routers,
   document.getElementById('root')
 )

@@ -6,11 +6,6 @@ module.exports = {
       "jsx": true
     }
   },
-  //below is eslint v3
-  "ecmaFeatures": {
-    "jsx": true,
-    "modules": true
-  },
   "plugins": [
     "react"
   ],

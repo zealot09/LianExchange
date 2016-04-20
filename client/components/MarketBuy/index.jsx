@@ -22,9 +22,10 @@ class MarketBuy extends Component {
         <ul className={listClassName}>
           {
             coins.map(function(item) {
-              return <li><div className={style.price}><span>{item.price}</span>元/个</div>
+              return <li key={item.quantityLeft}><div className={style.price}><span>{item.price}</span>元/个</div>
                     <div className={style.amount}><span>{item.quantityLeft}</span>个</div>
-                    <div className={style.operate}><a href="javascript:void(0);" className={style.btnBuy}>抢购</a></div></li>
+                    <div className={style.operate}><a href="javascript:void(0);" className={style.btnBuy}>抢购</a></div>
+                    </li>
             })
           }
           <div className="clear"></div>
